@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<link href="~/css/signin.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/eConsultasMVC.styles.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/starter-template.css" asp-append-version="true" />
+
+<div class="text-center w-100">
+    <main class="form-signin">
+        <form asp-action="Login" method="post">
+            <h1 class="h3 mb-3 fw-normal">Please log in</h1>
+            
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@@example.com" required>
+                <label for="email">Email:</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="name@@example.com" required>
+                <label for="password">Password:</label>
+            </div>
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" /> Remember me
+                </label>
+            </div>
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+
+            <div class="mt-1">
+
+                <a asp-controller="Auth" asp-action="Register" class="btn btn-primary btn-lg px-4">Register</a>
+
+                <a asp-controller="LandingPage" asp-action="Index" class="btn btn-primary btn-lg px-4">Home</a>
+
+            </div>
+
+            <partial name="_Footer" />
+        </form>
+    </main>
+</div>
